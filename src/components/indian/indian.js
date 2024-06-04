@@ -81,7 +81,7 @@ const Indian = () => {
                 <iframe
                   width={state.width}
                   height={state.height}
-                  frameBorder="0"
+                  controls
                   src={each.url}
                   allowFullScreen
                 ></iframe>

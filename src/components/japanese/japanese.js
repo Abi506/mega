@@ -26,13 +26,13 @@ const urlData = [
 const reducer = (state, action) => {
   switch (action.type) {
     case 'incrementWidth':
-      return { ...state, width: parseInt(state.width + 50 )};
+      return { ...state, width: state.width + 50 };
     case 'decrementWidth':
-      return { ...state, width: parseInt(state.width - 50 )};
+      return { ...state, width: state.width - 50 };
     case 'incrementHeight':
-      return { ...state, height: parseInt(state.height + 50) };
+      return { ...state, height: state.height + 50 };
     case 'decrementHeight':
-      return { ...state, height: parseInt(state.height - 50 )};
+      return { ...state, height: state.height - 50 };
     default:
       return state;
   }
@@ -80,6 +80,7 @@ const Home = () => {
                   frameBorder="0"
                   src={each.url}
                   allowFullScreen
+                  style={{ border: 'none' }}
                 ></iframe>
               )}
             </div>
