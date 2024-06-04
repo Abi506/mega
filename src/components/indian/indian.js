@@ -5,22 +5,26 @@ const initialState = {
   height: 500,
 };
 
+
 const urlData = [
   {
-    url: "https://mega.nz/embed/RaV1iS4A#FRye6RCbyO1GZVNkgG1Tnm6dfVYr5NO7ngpMGmUFFGs"
+    url: "https://mega.nz/embed/BPMjVABL#5i6oXZn8Z2JSfRo3E8fsaxbG4Cr5nMfFoELCa5pPfXE"
   },
   {   
-    url: "https://mega.nz/embed/IX1H1A4D#E069qM0JefYBv8X-Ncw3NSI-59HGSiuDFnnoU1j2N_M"
+    url: "https://mega.nz/embed/YPESnLaI#UdojSY12cNbiX1jxJTGr2RpcMSZ4k79UQ2Sdd6cjINw"
   },
   {
-    url: "https://mega.nz/embed/kW8AWB5Z#py5KLkY60rSSPfo-4KFUU44c3dSTYP79Lsk_igJaecY"
+    url: "https://mega.nz/embed/5SNE1BKZ#yBX5zSQ79tmzI4z3HRx7uxSwxwqMpU2zoXPjA8MgAiM"
   },
   {
-    url: "https://mega.nz/embed/4fV1STBA#XP15kITFKvJgb2dQxRW7bVDrc4qhqZ_QkFfwhOPbDPw"
+    url: "https://mega.nz/embed/UftzRLZZ#wVc2czIMpo5Yu4FOH4JTW6Ln3YjGvJTeaD98L4lTG0s"
   },
   {
-    url: "https://mega.nz/embed/RfsxnSDS#rPwEqCmiqK7nAsGPGf_N71REAzmPlrscp3YBzYxNG58"
+    url: "https://mega.nz/embed/QfE3iSyS#Hb-3s35Q8htVgVVCMTcBOHFJSdOeEMBpxPanNmg1D58"
   },
+  {
+    url:'https://mega.nz/embed/VOcVmSxQ#b0EwCPNS_owy2rkWRmJSUmv6N5mHI3LzJVTMnSVFE3w'
+  }
 ];
 
 const reducer = (state, action) => {
@@ -38,7 +42,7 @@ const reducer = (state, action) => {
   }
 };
 
-const Home = () => {
+const Indian = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const increasedWidth = () => {
@@ -59,8 +63,8 @@ const Home = () => {
 
   return (
     <ul>
-      <h1>Japanese</h1>
-      <a href='/indian'><button>Indian</button></a>
+      <h1>Indian</h1>
+      <a href='/'><button>Japanese</button></a>
       {urlData.map((each, index) => {
         return (
           <li key={index}>
@@ -90,4 +94,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Indian;

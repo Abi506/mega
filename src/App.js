@@ -1,12 +1,15 @@
 import React from 'react'
+import {BrowserRouter,Route,Routes} from 'react-router-dom'
 import Home from './components/japanese/japanese'
-import Section from './components/section/section'
+import Section from './components/indian/indian'
 const App = () => {
   return (
-    <div>
-      <Home/>
-      <Section/>
-    </div>
+    <BrowserRouter>
+    <Routes>
+      <Route exact path='/' element={<Home/>} />
+      <Route exact path='/indian' element={<Section/>}/>
+    </Routes>
+    </BrowserRouter>
   )
 }
 
