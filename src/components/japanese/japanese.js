@@ -1,8 +1,8 @@
 import React, { useReducer } from 'react';
 
 const initialState = {
-  width: 1000,  // Width and height as numbers, not strings
-  height: 500,
+  width: window.innerWidth,  // Width and height as numbers, not strings
+  height: window.innerHeight,
 };
 
 const urlData = [
@@ -26,13 +26,13 @@ const urlData = [
 const reducer = (state, action) => {
   switch (action.type) {
     case 'incrementWidth':
-      return { ...state, width: state.width + 50 };
+      return { ...state, width: parseInt(state.width + 50 )};
     case 'decrementWidth':
-      return { ...state, width: state.width - 50 };
+      return { ...state, width: parseInt(state.width - 50 )};
     case 'incrementHeight':
-      return { ...state, height: state.height + 50 };
+      return { ...state, height: parseInt(state.height + 50) };
     case 'decrementHeight':
-      return { ...state, height: state.height - 50 };
+      return { ...state, height: parseInt(state.height - 50 )};
     default:
       return state;
   }
@@ -80,7 +80,6 @@ const Home = () => {
                   frameBorder="0"
                   src={each.url}
                   allowFullScreen
-                  style={{ border: 'none' }}
                 ></iframe>
               )}
             </div>
