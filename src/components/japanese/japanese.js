@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react';
 
 const initialState = {
-  width: 1000,  // Width and height as numbers, not strings
+  width: window.innerWidth,  // Width and height as numbers, not strings
   height: 500,
 };
 

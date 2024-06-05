@@ -1,7 +1,7 @@
 import React, { useReducer } from 'react';
 
 const initialState = {
-  width: 1000,
+  width: window.innerWidth,
   height: 500,
 };
 
@@ -45,6 +45,10 @@ const urlData = [
   {
     url:"https://drive.google.com/file/d/1-qSCZe8dbQCTnmYZT63wmdPa9Tl01DM4/preview",
     name:"Family Reconstruction 2017"
+  },
+  {
+    url:"https://drive.google.com/file/d/1-z0iBuyPsG8PXMtIfgmKZX8xKKqQGGTj/preview",
+    name:"18 Sexy queen eugenes"
   }
 ];
 

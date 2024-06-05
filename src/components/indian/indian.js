@@ -1,22 +1,26 @@
 import React, { useReducer } from 'react';
 
 const initialState = {
-  width: 1000,
+  width: window.innerWidth,
   height: 500,
 };
 
 const urlData = [
   {
-    url: "https://mega.nz/embed/BPMjVABL#5i6oXZn8Z2JSfRo3E8fsaxbG4Cr5nMfFoELCa5pPfXE"
+    url: "https://drive.google.com/file/d/10FbVZjn0O6muJEDTelMh67lop563PkIy/preview",
+    name:"Uma Devi Sarre best navel press (own)"
   },
   {   
-    url: "https://mega.nz/embed/YPESnLaI#UdojSY12cNbiX1jxJTGr2RpcMSZ4k79UQ2Sdd6cjINw"
+    url: "https://drive.google.com/file/d/10TaAqH4XQ_D9JmA5AwRj5LWXwGAS-4-g/preview",
+    name:"Aunty navel fucked in kitchen (own)"
   },
   {
-    url: "https://mega.nz/embed/5SNE1BKZ#yBX5zSQ79tmzI4z3HRx7uxSwxwqMpU2zoXPjA8MgAiM"
+    url: "https://drive.google.com/file/d/10MFvWEIz4NT8xIT2V_Q369R9N63dMD79/preview",
+    name:"Young Uma Devi romance in bedrom (own)"
   },
   {
-    url: "https://mega.nz/embed/UftzRLZZ#wVc2czIMpo5Yu4FOH4JTW6Ln3YjGvJTeaD98L4lTG0s"
+    url: "https://drive.google.com/file/d/10ebPG7c4_C_Bn-DQPYdKIInHmhJ78QhI/preview",
+    name:"Marathi aunty navel in public bus"
   },
   {
     url: "https://mega.nz/embed/QfE3iSyS#Hb-3s35Q8htVgVVCMTcBOHFJSdOeEMBpxPanNmg1D58"
@@ -68,6 +72,7 @@ const Indian = () => {
       {urlData.map((each, index) => {
         return (
           <li key={index}>
+            {each.name && ( <h1>{each.name}</h1>)}
             <div>
               <p>Width: {state.width}px</p>
               <p>Height: {state.height}px</p>
