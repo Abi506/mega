@@ -1,10 +1,9 @@
 import React, { useReducer } from 'react';
 
 const initialState = {
-  width: 1000,  // Width and height as numbers, not strings
+  width: 1000,
   height: 500,
 };
-
 
 const urlData = [
   {
@@ -23,20 +22,20 @@ const urlData = [
     url: "https://mega.nz/embed/QfE3iSyS#Hb-3s35Q8htVgVVCMTcBOHFJSdOeEMBpxPanNmg1D58"
   },
   {
-    url:'https://mega.nz/embed/VOcVmSxQ#b0EwCPNS_owy2rkWRmJSUmv6N5mHI3LzJVTMnSVFE3w'
-  }
+    url: "https://mega.nz/embed/VOcVmSxQ#b0EwCPNS_owy2rkWRmJSUmv6N5mHI3LzJVTMnSVFE3w"
+  },
 ];
 
 const reducer = (state, action) => {
   switch (action.type) {
     case 'incrementWidth':
-      return { ...state, width: parseInt(state.width + 50 )};
+      return { ...state, width: state.width + 50 };
     case 'decrementWidth':
-      return { ...state, width: parseInt(state.width - 50 )};
+      return { ...state, width: state.width - 50 };
     case 'incrementHeight':
-      return { ...state, height: parseInt(state.height + 50) };
+      return { ...state, height: state.height + 50 };
     case 'decrementHeight':
-      return { ...state, height: parseInt(state.height - 50 )};
+      return { ...state, height: state.height - 50 };
     default:
       return state;
   }
@@ -65,6 +64,7 @@ const Indian = () => {
     <ul>
       <h1>Indian</h1>
       <a href='/'><button>Japanese</button></a>
+      <a href='/korean'><button>Drive Korean </button></a>
       {urlData.map((each, index) => {
         return (
           <li key={index}>
@@ -81,7 +81,6 @@ const Indian = () => {
                 <iframe
                   width={state.width}
                   height={state.height}
-                  controls
                   src={each.url}
                   allowFullScreen
                 ></iframe>
