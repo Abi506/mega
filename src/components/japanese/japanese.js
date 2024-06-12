@@ -21,6 +21,9 @@ const urlData = [
   {
     url: "https://mega.nz/embed/RfsxnSDS#rPwEqCmiqK7nAsGPGf_N71REAzmPlrscp3YBzYxNG58"
   },
+  {
+    url:"https://drive.google.com/file/d/10hkruk9A7W1Gcokg-R3K6pnbyvdG-RDH/preview",
+  }
 ];
 
 const reducer = (state, action) => {
